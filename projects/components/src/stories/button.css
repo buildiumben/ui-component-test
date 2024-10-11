@@ -1,4 +1,6 @@
 .storybook-button {
+  padding: 24px 16px;
+
   .mdc-button__label {
     align-items: center;
     display: flex;
