@@ -21,7 +21,7 @@
   line-height: 1;
 }
 
-.storybook-header button + button {
+.storybook-header storybook-button + storybook-button {
   margin-left: 10px;
 }
 

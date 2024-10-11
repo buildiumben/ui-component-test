@@ -21,6 +21,9 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrls: ['./button.css'],
 })
 export class ButtonComponent {
+  @Input()
+  class?: string;
+
   /** Is this the principal call to action on the page? */
   @Input()
   color: ThemePalette = 'primary';
@@ -32,9 +35,6 @@ export class ButtonComponent {
   @Input()
   size: 'small' | 'medium' | 'large' = 'medium';
 
-  /**
-   *
-   */
   @Input()
   type: 'button' | 'submit' = 'button';
 
