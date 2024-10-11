@@ -9,9 +9,6 @@ const meta: Meta<ButtonComponent> = {
   component: ButtonComponent,
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: {
-      control: 'color',
-    },
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
@@ -23,27 +20,29 @@ type Story = StoryObj<ButtonComponent>;
 // More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
 export const Primary: Story = {
   args: {
-    primary: true,
+    color: 'primary',
     label: 'Button',
   },
 };
 
-export const Secondary: Story = {
+export const Accent: Story = {
   args: {
+    color: 'accent',
     label: 'Button',
   },
 };
 
-export const Large: Story = {
+export const Warn: Story = {
   args: {
-    size: 'large',
+    color: 'warn',
     label: 'Button',
   },
 };
 
-export const Small: Story = {
+export const Disabled: Story = {
   args: {
-    size: 'small',
+    color: 'primary',
+    disabled: true,
     label: 'Button',
   },
 };
