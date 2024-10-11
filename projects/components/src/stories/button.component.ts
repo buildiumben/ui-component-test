@@ -11,6 +11,7 @@ import { MatIconModule } from '@angular/material/icon';
   template: `
 <button
   mat-flat-button
+  [ngClass]="[class, 'mat-elevation-z0']"
   (click)="onClick.emit($event)"
   [color]="color"
   [disabled]="disabled"
@@ -22,14 +23,14 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class ButtonComponent {
   @Input()
-  class?: string;
+  class?: string = '';
 
   /** Is this the principal call to action on the page? */
   @Input()
   color: ThemePalette = 'primary';
 
   @Input()
-  disabled?: boolean;
+  disabled: boolean = false;
 
   /** How large should the button be? */
   @Input()
