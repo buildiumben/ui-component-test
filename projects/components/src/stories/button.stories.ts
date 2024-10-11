@@ -9,6 +9,10 @@ const meta: Meta<ButtonComponent> = {
   component: ButtonComponent,
   tags: ['autodocs'],
   argTypes: {
+
+    iconPosition: {
+      options: ['prefix', 'suffix']
+    }
   },
   // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
@@ -44,5 +48,27 @@ export const Disabled: Story = {
     color: 'primary',
     disabled: true,
     label: 'Button',
+  },
+};
+
+export const IconPrefix: Story = {
+  argTypes: {
+  },
+  args: {
+    color: 'primary',
+    label: 'Sort',
+    icon: 'sort',
+    iconPosition: 'prefix'
+  },
+};
+
+export const IconSuffix: Story = {
+  argTypes: {
+  },
+  args: {
+    color: 'primary',
+    label: 'Sort',
+    icon: 'sort',
+    iconPosition: 'suffix'
   },
 };
