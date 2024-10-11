@@ -17,7 +17,9 @@ import { MatIconModule } from '@angular/material/icon';
   [disabled]="disabled"
   [type]="type"
 >
-  {{ label }}
+<mat-icon *ngIf="icon && iconPosition === 'prefix'">{{ icon }}</mat-icon>
+<span>{{ label }}</span>
+<mat-icon *ngIf="icon && iconPosition === 'suffix'">{{ icon }}</mat-icon>
 </button>`,
   styleUrls: ['./button.css'],
 })
@@ -32,12 +34,11 @@ export class ButtonComponent {
   @Input()
   disabled: boolean = false;
 
-  /** How large should the button be? */
   @Input()
-  size: 'small' | 'medium' | 'large' = 'medium';
+  icon?: string;
 
   @Input()
-  type: 'button' | 'submit' = 'button';
+  iconPosition: 'prefix' | 'suffix' = 'prefix';
 
   /**
    * Button contents
@@ -46,6 +47,13 @@ export class ButtonComponent {
    */
   @Input()
   label = 'Button';
+
+  /** How large should the button be? */
+  @Input()
+  size: 'small' | 'medium' | 'large' = 'medium';
+
+  @Input()
+  type: 'button' | 'submit' = 'button';
 
   /** Optional click handler */
   @Output()
