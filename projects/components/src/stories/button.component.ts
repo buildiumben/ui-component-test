@@ -40,7 +40,7 @@ export class ButtonComponent {
   icon?: string;
 
   @Input()
-  iconPosition: 'prefix' | 'suffix' = 'prefix';
+  iconPosition: 'prefix' | 'suffix' = 'suffix';
 
   /**
    * Button contents
