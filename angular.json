@@ -40,7 +40,10 @@
             "configDir": "projects/components/.storybook",
             "browserTarget": "components:build",
             "compodoc": false,
-            "port": 6006
+            "port": 6006,
+            "styles": [
+              "node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
+            ]
           }
         },
         "build-storybook": {
@@ -49,7 +52,10 @@
             "configDir": "projects/components/.storybook",
             "browserTarget": "components:build",
             "compodoc": false,
-            "outputDir": "storybook-static"
+            "outputDir": "storybook-static",
+            "styles": [
+              "node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css"
+            ]
           }
         }
       }
