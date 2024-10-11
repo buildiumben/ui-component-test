@@ -38,11 +38,3 @@ export const Warn: Story = {
     label: 'Button',
   },
 };
-
-export const Disabled: Story = {
-  args: {
-    color: 'primary',
-    disabled: true,
-    label: 'Button',
-  },
-};
