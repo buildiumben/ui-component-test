@@ -26,7 +26,7 @@ export class ButtonComponent {
 
   /** How large should the button be? */
   @Input()
-  size: 'small' | 'medium' | 'large' = 'large';
+  size: 'small' | 'medium' | 'large' = 'medium';
 
   /**
    * Button contents
