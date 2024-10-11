@@ -11,15 +11,17 @@ import { MatIconModule } from '@angular/material/icon';
   template: `
 <button
   mat-flat-button
-  [ngClass]="[class, 'mat-elevation-z0']"
+  [ngClass]="[class, 'storybook-button']"
   (click)="onClick.emit($event)"
   [color]="color"
   [disabled]="disabled"
   [type]="type"
 >
-<mat-icon *ngIf="icon && iconPosition === 'prefix'">{{ icon }}</mat-icon>
-<span>{{ label }}</span>
-<mat-icon *ngIf="icon && iconPosition === 'suffix'">{{ icon }}</mat-icon>
+  <ng-container>
+    <mat-icon *ngIf="icon && iconPosition === 'prefix'" class="prefix">{{ icon }}</mat-icon>
+    {{ label }}
+    <mat-icon *ngIf="icon && iconPosition === 'suffix'" class="suffix">{{ icon }}</mat-icon>
+  </ng-container>
 </button>`,
   styleUrls: ['./button.css'],
 })

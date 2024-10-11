@@ -51,7 +51,7 @@ export const Disabled: Story = {
   },
 };
 
-export const Icon: Story = {
+export const IconPrefix: Story = {
   argTypes: {
   },
   args: {
@@ -59,5 +59,16 @@ export const Icon: Story = {
     label: 'Sort',
     icon: 'sort',
     iconPosition: 'prefix'
+  },
+};
+
+export const IconSuffix: Story = {
+  argTypes: {
+  },
+  args: {
+    color: 'primary',
+    label: 'Sort',
+    icon: 'sort',
+    iconPosition: 'suffix'
   },
 };
