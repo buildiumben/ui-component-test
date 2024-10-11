@@ -1,5 +1,7 @@
 .storybook-button {
   .mdc-button__label {
+    align-items: center;
     display: flex;
+    gap: 8px;
   }
 }
